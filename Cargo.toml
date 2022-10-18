@@ -1,0 +1,22 @@
+[package]
+name = "toxy"
+version = "0.1.0"
+edition = "2021"
+authors = ["Scott Rossillo <scott@rossillo.net>"]
+keywords = ["reverse-proxy", "token-exchange"]
+categories = ["authentication", "network-programming", "web-programming::http-server"]
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.57"
+futures = "0.3.24"
+hyper = { version = "0.14.20", features = ["full"] }
+hyper-reverse-proxy = "0.5.1"
+reqwest = { version = "0.11.12", features = ["json"] }
+serde = { version = "1.0.137", features = ["derive"] }
+serde_json = "1.0.85"
+tokio = { version = "1.21.2", features = ["full"] }
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
