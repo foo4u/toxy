@@ -56,7 +56,7 @@ impl Toxy {
             }
         }
 
-        return self.do_exchange(client_ip, *req).await;
+        self.do_exchange(client_ip, *req).await
     }
 
     async fn do_exchange(&self, client_ip: IpAddr, req: Request<Body>) -> Result<Response<Body>, Infallible> {
@@ -64,7 +64,7 @@ impl Toxy {
             Ok(response) => { Ok(response) }
             Err(error) => {
                 tracing::error!("Proxy request failed: {:?}", error);
-                return Ok(Response::builder()
+                Ok(Response::builder()
                     .status(StatusCode::INTERNAL_SERVER_ERROR)
                     .body(Body::empty())
                     .unwrap())

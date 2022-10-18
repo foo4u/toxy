@@ -7,7 +7,7 @@ use serde::{Deserialize, Serialize};
 pub trait TokenExchanger {
     async fn maybe_exchange(
         &self,
-        request: &Box<Request<Body>>
+        request: &Request<Body>
     ) -> Result<Option<TokenExchangeResponse>, TokenExchangeError>;
 }
 
