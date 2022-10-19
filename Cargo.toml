@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Scott Rossillo <scott@rossillo.net>"]
 keywords = ["reverse-proxy", "token-exchange"]
 categories = ["authentication", "network-programming", "web-programming::http-server"]
+description = "An Oauth2 token exchange aware reverse proxy based on hyper."
 license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/foo4u/toxy"
