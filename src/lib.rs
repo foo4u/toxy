@@ -1,3 +1,5 @@
+#![doc = include_str!("../README.md")]
+
 pub mod config;
 pub mod token_exchanger;
 
@@ -17,6 +19,8 @@ pub struct Toxy {
 }
 
 impl Toxy {
+    /// Creates a new [Toxy] with the given configuration and [TokenExchanger]
+    ///
     pub fn with_token_exchanger(config: UpstreamConfig, token_exchanger: Box<dyn TokenExchanger + Sync + Send>) -> Toxy {
         Toxy {
             config,
