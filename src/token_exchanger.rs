@@ -28,8 +28,13 @@ impl TokenExchangeError {
     }
 }
 
+/// Response from a [TokenExchanger] upon successfully completing a token exchange.
+/// This response includes an `access_token` and `token_type`, which will be used to
+/// populate the `Authorization` header on the proxied request.
 #[derive(Serialize,Deserialize,Debug)]
 pub struct TokenExchangeResponse {
+    /// The token to forward to the upstream service.
     pub access_token: String,
+    /// The token type (e.g. `Bearer`).
     pub token_type: String
 }
