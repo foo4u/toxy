@@ -1,6 +1,6 @@
 [package]
 name = "toxy"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Scott Rossillo <scott@rossillo.net>"]
 keywords = ["reverse-proxy", "token-exchange"]
@@ -16,6 +16,7 @@ repository = "https://github.com/foo4u/toxy"
 async-trait = "0.1.57"
 futures = "0.3.24"
 hyper = { version = "0.14.20", features = ["full"] }
+hyper-native-tls = "0.3.0"
 hyper-reverse-proxy = "0.5.1"
 reqwest = { version = "0.11.12", features = ["json"] }
 serde = { version = "1.0.137", features = ["derive"] }
